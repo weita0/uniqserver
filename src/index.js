@@ -8,15 +8,15 @@ app
   .use(router.routes())
   .use(router.allowedMethods())
 
-router.get('/', async ctx => {
+router.get('/api', async ctx => {
   ctx.body = 'hello world'
 })
 
-router.get('/google_translate', convert(proxy({
+router.get('/api/google_translate', convert(proxy({
   host: 'https://translate.google.com'  
 })))
 
-router.post('/single_translate', convert(proxy({
+router.post('/api/single_translate', convert(proxy({
   host: 'https://translate.google.com/',  
 })))
 
