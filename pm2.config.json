@@ -1,0 +1,14 @@
+{
+  "apps": [{
+    "name": "server",
+    "script": "node src/index.js",
+    "watch": true,
+    "instance": "max",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production": {
+      "NODE_ENV": "production"
+    }
+  }]
+}
